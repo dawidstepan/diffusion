@@ -46,7 +46,7 @@ program diffusion
 	alpha = delta_t*D/(2*delta_x*delta_x)	  
 	A = (1 + 2*alpha) 	  
 
-	! determin u the right-hand side
+	! determine u the right-hand side
 	do i = 1, N
 	if (i == 1) then 
 		u(i) = density(x(1),t)
@@ -57,7 +57,7 @@ program diffusion
 	endif 
 	enddo
 
-	! determin the matrix for each time step in matrix and vector form
+	! determine the matrix for each time step in matrix and vector form
 	! matrix form 
 	M = 0.
 	M = reshape(M,[N,N])
@@ -134,7 +134,7 @@ program diffusion
 	alpha = delta_t*D/(2*delta_x*delta_x)	  
 	A = (1 + 2*alpha) 
 
-	! determin u the right-hand side
+	! determine u the right-hand side
 	do i = 1, N
 		if (i == 1) then 
 			u(i) = (1-2*alpha)*rho(i) + 2*alpha*rho(i+1)
@@ -145,7 +145,7 @@ program diffusion
 		endif 
 	enddo
 
-	! determin the matrix for each time step in matrix and vector form
+	! determine the matrix for each time step in matrix and vector form
 	! matrix form 
 	M = 0.
 	M = reshape(M,[N,N])
